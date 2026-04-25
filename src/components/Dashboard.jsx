@@ -45,9 +45,9 @@ export default function Dashboard (){
         <button onClick={alphaSort}>Sort by Last Name</button>
 
         
-          <ul>
+          <main>
           {userData.map((person) => (
-            <li key={person.login.uuid}>
+            <section key={person.login.uuid}>
               <h2>
                 {person.name.title} {person.name.first} {person.name.last}
               </h2>
@@ -66,9 +66,9 @@ export default function Dashboard (){
                   Location: {person.location.city} {person.location.state}
                 </li>
               </ul>
-            </li>
+            </section>
           ))}
-        </ul>
+        </main>
         {error && <p>{error}</p>}
       </>
     );
